@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fixture-profile>
+	<title>MAC Viper Wash DX</title>
+	<manufacturer>Martin Professional</manufacturer>
+	<manufacturer>Martin</manufacturer>
+	<brand>MAC</brand>
+	<series>Viper</series>
+	<type>Wash DX</type>
+	<control>
+		<dmx>true</dmx>
+		<rdm>true</rdm>
+	</control>
+	<specs>
+		<physical>
+			<dimensions>
+				<length unit="mm">566</length>
+				<width unit="mm">472</width>
+				<height unit="mm">748</height>
+			</dimensions>
+			<weight unit="kg">33</weight>
+		</physical>
+		<lamps>
+			<lamp option="1">
+				<wattage>1000</wattage>
+				<type>Short-Arc Discharge</type>
+				<color-temp unit="k">6000</color-temp>
+				<ballast>Electronic</ballast>
+				<socket>PGJX36</socket>
+			</lamp>
+		</lamps>
+		<electrical-options>
+			<electrical option="1">
+				<voltage-range>
+					<low>120</low>
+					<high>240</high>
+				</voltage-range>
+				<frequency-options>
+					<frequency option="1">50</frequency>
+					<frequency option="2">60</frequency>
+				</frequency-options>
+				<current unit="amp">16.2</current>
+			</electrical>
+		</electrical-options>
+	</specs>
+	<default-wheels>
+		<color>
+			<wheel index="1" default-index="1">
+				<slot index="1" name="Blue 101 SP" color="#0C26EB" changeable="true" />
+				<slot index="2" name="Green 203 SP" color="#369C06" changeable="true" />
+				<slot index="3" name="Orange 311 SP" color="#F56505" changeable="true" />
+				<slot index="4" name="Half Minus Green SP" color="#EBA87C" changeable="true" />
+				<slot index="5" name="Magenta 522 SP" color="#ACA3AD" changeable="true" />
+				<slot index="6" name="Deep Blue SP (Congo)" color="#800A8F" changeable="true" />
+				<slot index="7" name="Red 310 SP" color="#CF30E3" changeable="true" />
+				<slot index="8" name="Open" no-color="true" color="#FFFFFF" changeable="false" />
+			</wheel>
+		</color>
+	</default-wheels>
+	<dmx-profiles>
+		<profile option="1">
+			<name>Basic 16-Bit Mode</name>
+			<channels>
+				<channel index="0" name="Strobe/Shutter" fade="false" default="30" highlight="30">
+					<level from="0" to="19" name="Closed">Shutter Closed</level>
+					<level from="20" to="49" name="Open">Shutter Open</level>
+					<level-range low="50" high="200" name="Strobe 1..100%">
+						<level type="min" from="50" to="50">Min</level>
+						<level type="max" from="200" to="200">Max</level>
+					</level-range>
+					<level from="201" to="210" name="Open">Shutter Open</level>
+					<level-range low="211" high="255" name="Random Strobe 1..100%">
+						<level type="min" from="211" to="211">Min</level>
+						<level type="max" from="255" to="255">Max</level>
+					</level-range>
+				</channel>
+				<channel index="1" name="Dimmer Fade" fade="true" default="0" highlight="255" grandmaster="true" dimmer="true">
+					<level-range low="0" high="255" name="Dim 0..100%">
+						<level type="min" from="0" to="0">Closed</level>
+						<level type="max" from="255" to="255">Open</level>
+					</level-range>
+				</channel>
+				<channel index="2" name="Cyan" fade="true" default="0" highlight="255">
+					<level-range low="0" high="255" name="Cyan 0..100%">
+						<level type="min" from="0" to="0">Min</level>
+						<level type="max" from="255" to="255">Max</level>
+					</level-range>
+				</channel>
+				<channel index="3" name="Magenta" fade="true" default="0" highlight="255">
+					<level-range low="0" high="255" name="Magenta 0..100%">
+						<level type="min" from="0" to="0">Min</level>
+						<level type="max" from="255" to="255">Max</level>
+					</level-range>
+				</channel>
+				<channel index="4" name="Yellow" fade="true" default="0" highlight="255">
+					<level-range low="0" high="255" name="Yellow 0..100%">
+						<level type="min" from="0" to="0">Min</level>
+						<level type="max" from="255" to="255">Max</level>
+					</level-range>
+				</channel>
+				<channel index="5" name="CTO" fade="true" default="0" highlight="255">
+					<level-range low="0" high="255" name="CTO 0..100%">
+						<level type="min" from="0" to="0">Open (6000 K)</level>
+						<level type="max" from="255" to="255">Warm (3200 K)</level>
+					</level-range>
+				</channel>
+				<channel index="6" name="Color Wheel" fade="false" default="0" highlight="0">
+					<wheel-range low="0" high="120" name="Continuous Scroll">
+						<wheel-slot from="0" to="0" slot1="8">Open</wheel-slot>
+						<wheel-slot from="1" to="14" slot1="8" slot2="1">Open -> Slot 1</wheel-slot>
+						<wheel-slot from="15" to="15" slot1="1">Slot 1</wheel-slot>
+						<wheel-slot from="16" to="29" slot1="1" slot2="2">Slot 1 -> Slot 2</wheel-slot>
+						<wheel-slot from="30" to="30" slot1="2">Slot 2</wheel-slot>
+						<wheel-slot from="31" to="44" slot1="2" slot2="3">Slot 2 -> Slot 3</wheel-slot>
+						<wheel-slot from="45" to="45" slot1="3">Slot 3</wheel-slot>
+						<wheel-slot from="46" to="59" slot1="3" slot2="4">Slot 3 -> Slot 4</wheel-slot>
+						<wheel-slot from="60" to="60" slot1="4">Slot 4</wheel-slot>
+						<wheel-slot from="61" to="74" slot1="4" slot2="5">Slot 4 -> Slot 5</wheel-slot>
+						<wheel-slot from="75" to="75" slot1="5">Slot 5</wheel-slot>
+						<wheel-slot from="76" to="89" slot1="5" slot2="6">Slot 5 -> Slot 6</wheel-slot>
+						<wheel-slot from="90" to="90" slot1="6">Slot 6</wheel-slot>
+						<wheel-slot from="91" to="104" slot1="6" slot2="7">Slot 6 -> Slot 7</wheel-slot>
+						<wheel-slot from="105" to="105" slot1="7">Slot 7</wheel-slot>
+						<wheel-slot from="106" to="119" slot1="7" slot2="8">Slot 7 -> Open</wheel-slot>
+						<wheel-slot from="120" to="120" slot1="8">Open</wheel-slot>
+					</wheel-range>
+					<wheel-range low="121" high="160" name="Stepped Scroll">
+						<wheel-slot from="121" to="125" slot1="1">Slot 1</wheel-slot>
+						<wheel-slot from="126" to="130" slot1="2">Slot 2</wheel-slot>
+						<wheel-slot from="131" to="135" slot1="3">Slot 3</wheel-slot>
+						<wheel-slot from="136" to="140" slot1="4">Slot 4</wheel-slot>
+						<wheel-slot from="141" to="145" slot1="5">Slot 5</wheel-slot>
+						<wheel-slot from="146" to="150" slot1="6">Slot 6</wheel-slot>
+						<wheel-slot from="151" to="155" slot1="7">Slot 7</wheel-slot>
+						<wheel-slot from="156" to="160" slot1="8">Open</wheel-slot>
+					</wheel-range>
+					<level-range low="161" high="200" name="Continuous Rotation (CW)">
+						<level type="max" from="161" to="161">Fast</level>
+						<level type="min" from="200" to="200">Slow</level>
+					</level-range>
+					<level from="201" to="203" name="Stop">Stop in Place</level>
+					<level-range low="204" high="243" name="Continuous Rotation (CCW)">
+						<level type="min" from="204" to="204">Slow</level>
+						<level type="max" from="243" to="243">Fast</level>
+					</level-range>
+					<level-range low="244" high="255" name="Random Color">
+						<level type="max" from="244" to="247">Fast</level>
+						<level type="med" from="248" to="251">Medium</level>
+						<level type="min" from="252" to="255">Slow</level>
+					</level-range>
+				</channel>
+			</channels>
+		</profile>
+	</dmx-profiles>
+</fixture-profile>
