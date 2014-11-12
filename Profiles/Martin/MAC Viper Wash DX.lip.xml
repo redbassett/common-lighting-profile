@@ -148,6 +148,25 @@
 						<level type="min" from="252" to="255">Slow</level>
 					</level-range>
 				</channel>
+				<channel index="7" name="Iris" fade="true" default="0" highlight="0">
+					<level-range low="0" high="255" name="Open -> Closed">
+						<level type="max" from="0" to="0">Open</level>
+						<level type="min" from="255" to="255">Closed</level>
+					</level-range>
+				</channel>
+				<channel index="8" name="Internal Barndoor 1" fade="true" default="0" highlight="0">
+					<level-range low="0" high="255" name="Out -> In">
+						<level type="min" from="0" to="0">Out</level>
+						<level type="max" from="255" to="255">In</level>
+					</level-range>
+				</channel>
+				<channel index="9" name="Internal Barndoor 2" fade="true" default="0" highlight="0">
+					<level-range low="0" high="255" name="Out -> In">
+						<level type="min" from="0" to="0">Out</level>
+						<level type="max" from="255" to="255">In</level>
+					</level-range>
+				</channel>
+				
 			</channels>
 		</profile>
 	</dmx-profiles>
